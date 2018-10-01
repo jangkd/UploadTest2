@@ -22,6 +22,7 @@ public class CommonController {
 	@Resource(name="commonService")
 	private CommonService commonService;
 	
+	
 	@RequestMapping(value="/common/downloadFile.do")
 	public void downloadFile(CommandMap commandMap, HttpServletResponse response) throws Exception{
 		Map<String,Object> map = commonService.selectFileInfo(commandMap.getMap());
